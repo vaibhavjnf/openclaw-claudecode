@@ -5,7 +5,7 @@ OPENCLAW_HOME="${OPENCLAW_HOME:-/opt/openclaw}"
 OPENCLAW_USER="${OPENCLAW_USER:-openclaw}"
 
 sudo apt-get update
-sudo apt-get install -y python3 python3-venv python3-pip tmux logrotate curl
+sudo apt-get install -y python3 python3-venv python3-pip tmux logrotate curl rsync
 
 if ! id -u "$OPENCLAW_USER" >/dev/null 2>&1; then
   sudo useradd --system --create-home --shell /bin/bash "$OPENCLAW_USER"

@@ -7,7 +7,7 @@ REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 echo "[1/8] Installing OS packages..."
 sudo apt-get update
-sudo apt-get install -y python3 python3-venv python3-pip tmux logrotate curl git
+sudo apt-get install -y python3 python3-venv python3-pip tmux logrotate curl git rsync
 
 echo "[2/8] Ensuring service user..."
 if ! id -u "$OPENCLAW_USER" >/dev/null 2>&1; then
