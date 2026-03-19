@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5fbff"/>
+      <stop offset="100%" stop-color="#eef7f1"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 34px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 500 16px 'Segoe UI', Arial, sans-serif; fill: #334155; }
+      .nodeTitle { font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #0b3b2e; }
+      .nodeText { font: 500 14px 'Segoe UI', Arial, sans-serif; fill: #1f2937; }
+      .label { font: 600 13px 'Segoe UI', Arial, sans-serif; fill: #1d4ed8; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="10" refY="4" orient="auto">
+      <polygon points="0,0 10,4 0,8" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="700" fill="url(#bg)"/>
+  <text x="60" y="70" class="title">OpenClaw for Claude Code</text>
+  <text x="60" y="100" class="subtitle">Community-ready plug-and-play VPS architecture</text>
+
+  <rect x="80" y="170" rx="14" ry="14" width="230" height="120" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="100" y="205" class="nodeTitle">Telegram User</text>
+  <text x="100" y="232" class="nodeText">Commands + chat input</text>
+  <text x="100" y="255" class="nodeText">/status /memory /tail</text>
+
+  <rect x="380" y="150" rx="14" ry="14" width="280" height="160" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="405" y="185" class="nodeTitle">Bridge (python-telegram-bot)</text>
+  <text x="405" y="212" class="nodeText">Auth whitelist</text>
+  <text x="405" y="235" class="nodeText">Queue + rate limit</text>
+  <text x="405" y="258" class="nodeText">Memory retrieval before inject</text>
+  <text x="405" y="281" class="nodeText">Auto relay from tmux log</text>
+
+  <rect x="740" y="150" rx="14" ry="14" width="320" height="160" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+  <text x="765" y="185" class="nodeTitle">tmux Session: openclaw</text>
+  <text x="765" y="212" class="nodeText">Claude Code interactive runtime</text>
+  <text x="765" y="235" class="nodeText">send-keys injection path</text>
+  <text x="765" y="258" class="nodeText">pipe-pane log output path</text>
+  <text x="765" y="281" class="nodeText">Survives SSH disconnect</text>
+
+  <rect x="380" y="380" rx="14" ry="14" width="300" height="220" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="405" y="415" class="nodeTitle">Memory Layer</text>
+  <text x="405" y="442" class="nodeText">daily/YYYY-MM-DD.md logs</text>
+  <text x="405" y="465" class="nodeText">long_term/*.md facts</text>
+  <text x="405" y="488" class="nodeText">index/lexical_index.json</text>
+  <text x="405" y="511" class="nodeText">/promote + #promote support</text>
+  <text x="405" y="534" class="nodeText">BM25-like retrieval</text>
+
+  <rect x="740" y="380" rx="14" ry="14" width="320" height="220" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+  <text x="765" y="415" class="nodeTitle">Scheduler + Watchdog</text>
+  <text x="765" y="442" class="nodeText">tasks.json (cron)</text>
+  <text x="765" y="465" class="nodeText">loops.json (interval jobs)</text>
+  <text x="765" y="488" class="nodeText">runtime state rehydration</text>
+  <text x="765" y="511" class="nodeText">Heartbeat monitors</text>
+  <text x="765" y="534" class="nodeText">systemctl restart on failure</text>
+
+  <line x1="310" y1="230" x2="380" y2="230" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="318" y="216" class="label">updates</text>
+  <line x1="660" y1="230" x2="740" y2="230" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="668" y="216" class="label">send-keys</text>
+  <line x1="900" y1="310" x2="900" y2="380" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="910" y="350" class="label">heartbeat + state</text>
+  <line x1="740" y1="290" x2="680" y2="430" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="695" y="345" class="label">assistant output</text>
+  <line x1="680" y1="460" x2="740" y2="460" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="682" y="447" class="label">retrieval context</text>
+</svg>

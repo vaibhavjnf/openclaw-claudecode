@@ -1,0 +1,20 @@
+[Unit]
+Description=OpenClaw Telegram Bridge
+After=network-online.target openclaw-runtime.service
+Wants=network-online.target
+Requires=openclaw-runtime.service
+StartLimitIntervalSec=60
+StartLimitBurst=20
+
+[Service]
+Type=simple
+User=openclaw
+Group=openclaw
+WorkingDirectory=/opt/openclaw
+EnvironmentFile=/opt/openclaw/.env
+ExecStart=/opt/openclaw/venv/bin/python -m bridge.bot
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

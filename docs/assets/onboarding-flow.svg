@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500">
+  <defs>
+    <style>
+      .t1 { font: 700 30px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .t2 { font: 600 16px 'Segoe UI', Arial, sans-serif; fill: #1f2937; }
+      .t3 { font: 500 14px 'Segoe UI', Arial, sans-serif; fill: #334155; }
+    </style>
+    <marker id="arr" markerWidth="10" markerHeight="8" refX="10" refY="4" orient="auto">
+      <polygon points="0,0 10,4 0,8" fill="#0ea5e9"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="500" fill="#f8fafc"/>
+  <text x="60" y="65" class="t1">Onboarding Flow</text>
+
+  <rect x="60" y="140" rx="12" ry="12" width="220" height="120" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="84" y="180" class="t2">1) Install</text>
+  <text x="84" y="205" class="t3">./scripts/install.sh</text>
+  <text x="84" y="228" class="t3">sets venv + services</text>
+
+  <rect x="340" y="140" rx="12" ry="12" width="230" height="120" fill="#ecfccb" stroke="#65a30d" stroke-width="2"/>
+  <text x="365" y="180" class="t2">2) Configure</text>
+  <text x="365" y="205" class="t3">python -m app.onboarding_cli init</text>
+  <text x="365" y="228" class="t3">writes .env + auth file</text>
+
+  <rect x="640" y="140" rx="12" ry="12" width="230" height="120" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="665" y="180" class="t2">3) Validate</text>
+  <text x="665" y="205" class="t3">python -m app.onboarding_cli doctor</text>
+  <text x="665" y="228" class="t3">dependency + token checks</text>
+
+  <rect x="940" y="140" rx="12" ry="12" width="200" height="120" fill="#fae8ff" stroke="#c026d3" stroke-width="2"/>
+  <text x="965" y="180" class="t2">4) Operate</text>
+  <text x="965" y="205" class="t3">/status, /memory</text>
+  <text x="965" y="228" class="t3">watchdog auto-heals</text>
+
+  <line x1="280" y1="200" x2="340" y2="200" stroke="#0ea5e9" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="570" y1="200" x2="640" y2="200" stroke="#0ea5e9" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="870" y1="200" x2="940" y2="200" stroke="#0ea5e9" stroke-width="3" marker-end="url(#arr)"/>
+
+  <rect x="60" y="330" rx="10" ry="10" width="1080" height="100" fill="#e2e8f0"/>
+  <text x="80" y="368" class="t2">Zero-manual goals</text>
+  <text x="80" y="394" class="t3">• One installer • Interactive onboarding • Built-in doctor checks • systemd persistence • tmux durability</text>
+</svg>

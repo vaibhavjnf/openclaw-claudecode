@@ -1,0 +1,10 @@
+[
+  {
+    "id": "runtime_ping",
+    "name": "Prompt runtime keepalive",
+    "interval_sec": 300,
+    "command": "tmux send-keys -t openclaw -l -- \"Heartbeat check: summarize current queued tasks in one line.\"; tmux send-keys -t openclaw C-m",
+    "max_silence_sec": 900,
+    "enabled": true
+  }
+]

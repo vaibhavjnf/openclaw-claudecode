@@ -1,0 +1,18 @@
+[
+  {
+    "id": "heartbeat",
+    "name": "Write heartbeat every minute",
+    "cron": "*/1 * * * *",
+    "command": "date -Is >> /opt/openclaw/logs/heartbeat.log",
+    "timeout_sec": 30,
+    "enabled": true
+  },
+  {
+    "id": "daily_reminder",
+    "name": "Send daily reminder into Claude session",
+    "cron": "0 9 * * *",
+    "command": "tmux send-keys -t openclaw -l -- \"Daily reminder: review open loops and memory promotions.\"; tmux send-keys -t openclaw C-m",
+    "timeout_sec": 30,
+    "enabled": true
+  }
+]

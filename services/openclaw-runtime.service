@@ -1,0 +1,19 @@
+[Unit]
+Description=OpenClaw Claude Runtime Manager
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=60
+StartLimitBurst=20
+
+[Service]
+Type=simple
+User=openclaw
+Group=openclaw
+WorkingDirectory=/opt/openclaw
+EnvironmentFile=/opt/openclaw/.env
+ExecStart=/opt/openclaw/venv/bin/python -m app.runtime_main
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

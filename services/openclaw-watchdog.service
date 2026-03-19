@@ -1,0 +1,18 @@
+[Unit]
+Description=OpenClaw Watchdog
+After=network-online.target openclaw-runtime.service openclaw-bridge.service openclaw-scheduler.service
+Wants=network-online.target
+StartLimitIntervalSec=60
+StartLimitBurst=20
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/openclaw
+EnvironmentFile=/opt/openclaw/.env
+ExecStart=/opt/openclaw/venv/bin/python -m app.watchdog_main
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
